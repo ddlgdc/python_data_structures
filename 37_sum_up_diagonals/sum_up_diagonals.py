@@ -18,3 +18,20 @@ def sum_up_diagonals(matrix):
         >>> sum_up_diagonals(m2)
         30
     """
+
+    size = len(matrix)
+    diagonal_sum = 0
+
+    for i in range(size):
+        diagonal_sum += matrix[i][i]
+        diagonal_sum += matrix[i][size - 1 - i]
+    
+    if size % 2 != 0:
+        diagonal_sum -= matrix[size // 2][size // 2]
+    return diagonal_sum
+
+m1 = [
+    [1, 2],
+    [30, 40],
+]
+print(sum_up_diagonals(m1)) 

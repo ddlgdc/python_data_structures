@@ -29,3 +29,14 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+
+    word = word.lower()
+    total_sum = 0
+    
+    for each in word:
+        each_position = ord(each) - ord('a') + 1
+        total_sum += each_position
+    
+    return total_sum % 2 == 1
+
+is_odd_string('a')
