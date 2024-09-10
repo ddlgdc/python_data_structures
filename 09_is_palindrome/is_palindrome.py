@@ -21,3 +21,18 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+    # convert to lowercase and remove spaces
+    normal_phrase = ''.join(phrase.lower().split())
+
+    # convert to a list
+    phrase_list = list(normal_phrase)
+
+    # check if list is the same forwards and backwards
+    return phrase_list == phrase_list[::-1]
+
+# Test cases
+print(is_palindrome('tacocat'))    # True
+print(is_palindrome('noon'))       # True
+print(is_palindrome('robert'))     # False
+print(is_palindrome('taco cat'))   # True
+print(is_palindrome('Noon'))       # True
