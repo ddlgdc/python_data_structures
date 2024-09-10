@@ -13,3 +13,12 @@ def intersection(l1, l2):
         >>> intersection([1, 2, 3], [4, 5, 6])
         []
     """
+
+    common_items = []
+    for item in l1:
+        if item in l2 and item not in common_items:
+            common_items.append(item)
+
+    return common_items
+
+intersection([1, 2, 3], [1, 2, 3, 4])

@@ -16,3 +16,18 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
+    #  extraction of hobies
+
+    hobbies_a = a[2]
+    hobbies_b = b[2]
+
+    for item in hobbies_a:
+        if item in hobbies_b:
+            return True
+    return False
+
+elmo = ('Elmo', 5, ['hugging', 'being nice'])
+sauron = ('Sauron', 5000, ['killing hobbits', 'chess'])
+gandalf = ('Gandalf', 10000, ['waving wands', 'chess'])
+print(friend_date(elmo, sauron))  # Output: False
+print(friend_date(sauron, gandalf))  # Output: True
